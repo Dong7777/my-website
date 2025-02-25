@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>我的简历 - 金冬</title>
+  <title>金冬的简历</title>
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -11,14 +11,14 @@
   <!-- 头部 -->
   <header>
     <div class="container">
-      <h1>张三</h1>
-      <p>Web开发者 | 软件工程师</p>
+      <h1>金冬</h1>
+      <p>固件工程师 | 嵌入式工程师</p>
       <nav>
         <ul>
           <li><a href="#about">关于我</a></li>
           <li><a href="#experience">工作经历</a></li>
           <li><a href="#skills">技能</a></li>
-          <li><a href="#projects">项目</a></li>
+          <li><a href="#projects">项目经验</a></li>
           <li><a href="#contact">联系我</a></li>
         </ul>
       </nav>
@@ -29,7 +29,7 @@
   <section id="about" class="section">
     <div class="container">
       <h2>关于我</h2>
-      <p>我是一名热爱编程的开发者，擅长前端开发和用户体验设计。拥有3年以上的Web开发经验，熟悉HTML、CSS、JavaScript和React等技术栈。</p>
+      <p>我是一名资深的固件工程师，擅长嵌入式系统开发、硬件调试和底层固件开发。拥有超过3年的嵌入式开发经验，精通 C、C++、汇编语言以及 RTOS。在多个硬件平台上完成过低层驱动程序的开发与优化，致力于为各类硬件设备提供高效、稳定的固件支持。</p>
     </div>
   </section>
 
@@ -39,14 +39,24 @@
       <h2>工作经历</h2>
       <ul>
         <li>
-          <h3>公司A - 前端开发工程师</h3>
+          <h3>公司A - 固件工程师</h3>
           <p>2020年 - 2022年</p>
-          <p>负责公司官网和内部系统的前端开发，优化用户体验并提升页面性能。</p>
+          <p>负责嵌入式设备的固件开发与调试，主要使用 C 和 C++ 编写底层驱动程序，参与多款基于 ARM Cortex-M 系列的微控制器产品开发。</p>
+          <ul>
+            <li>优化和调试多个硬件平台，确保固件的稳定性和性能。</li>
+            <li>与硬件团队紧密合作，解决了多个硬件与固件的兼容性问题。</li>
+            <li>参与 RTOS 环境下的任务调度和系统实时性优化。</li>
+          </ul>
         </li>
         <li>
-          <h3>公司B - 实习生</h3>
+          <h3>公司B - 固件开发实习生</h3>
           <p>2019年 - 2020年</p>
-          <p>参与多个项目的开发，学习并掌握了前端开发的基础技能。</p>
+          <p>协助完成嵌入式系统固件的开发工作，学习并应用底层开发技能，参与了多个项目的硬件调试与测试。</p>
+          <ul>
+            <li>编写硬件驱动程序并进行单元测试。</li>
+            <li>参与 RTOS 系统的调试，确保任务的顺利执行。</li>
+            <li>帮助团队解决硬件平台的问题并提出优化方案。</li>
+          </ul>
         </li>
       </ul>
     </div>
@@ -57,28 +67,37 @@
     <div class="container">
       <h2>技能</h2>
       <ul>
-        <li>HTML/CSS</li>
-        <li>JavaScript</li>
-        <li>React</li>
-        <li>Node.js</li>
-        <li>Git</li>
+        <li>精通 C/C++ 编程语言，扎实的底层开发能力。</li>
+        <li>熟悉 RTOS 和多任务调度技术，优化系统实时性。</li>
+        <li>熟练使用硬件调试工具（如 JTAG、逻辑分析仪、示波器）。</li>
+        <li>深入了解嵌入式系统架构和硬件接口协议（如 SPI、I2C、UART）。</li>
+        <li>具备编写硬件驱动程序的经验，了解常见的硬件平台。</li>
+        <li>掌握版本控制工具 Git 和常用的开发工具链。</li>
       </ul>
     </div>
   </section>
 
-  <!-- 项目 -->
+  <!-- 项目经验 -->
   <section id="projects" class="section">
     <div class="container">
-      <h2>项目</h2>
+      <h2>项目经验</h2>
       <div class="project">
-        <h3>个人博客</h3>
-        <p>使用React和Node.js搭建的个人博客，支持Markdown写作和评论功能。</p>
-        <a href="https://example.com" target="_blank">查看项目</a>
+        <h3>智能家居控制系统</h3>
+        <p>为智能家居设备开发了基于 ZigBee 协议的控制系统，支持设备的远程控制和状态监控。</p>
+        <ul>
+          <li>使用 ARM Cortex-M 处理器开发底层控制固件。</li>
+          <li>通过 ZigBee 协议实现了设备之间的无线通信。</li>
+          <li>优化了设备的响应速度和功耗，提升了用户体验。</li>
+        </ul>
       </div>
       <div class="project">
-        <h3>在线商城</h3>
-        <p>一个基于Vue.js和Firebase的在线商城项目，实现了用户注册、商品浏览和购买功能。</p>
-        <a href="https://example.com" target="_blank">查看项目</a>
+        <h3>车载监控系统</h3>
+        <p>为车载监控系统开发了嵌入式固件，支持视频数据的实时传输和存储。</p>
+        <ul>
+          <li>为系统设计并实现了基于 FPGA 的视频解码模块。</li>
+          <li>编写了多个硬件驱动程序，确保设备与传感器的兼容性。</li>
+          <li>优化了视频数据传输速度，减少了延迟并提升了系统的稳定性。</li>
+        </ul>
       </div>
     </div>
   </section>
@@ -87,16 +106,15 @@
   <section id="contact" class="section">
     <div class="container">
       <h2>联系我</h2>
-      <p>邮箱：zhangsan@example.com</p>
-      <p>GitHub：<a href="https://github.com/zhangsan" target="_blank">github.com/zhangsan</a></p>
-      <p>LinkedIn：<a href="https://linkedin.com/in/zhangsan" target="_blank">linkedin.com/in/zhangsan</a></p>
+      <p>邮箱：18004083353@163.com</p>
+      <p>GitHub：<a href="https://github.com/Dong7777" target="_blank">https://github.com/Dong7777</a></p>
     </div>
   </section>
 
   <!-- 页脚 -->
   <footer>
     <div class="container">
-      <p>&copy; 2023 张三. 保留所有权利。</p>
+      <p>&copy; 2023 金冬. 保留所有权利。</p>
     </div>
   </footer>
 </body>
