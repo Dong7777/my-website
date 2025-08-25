@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>金冬的简历</title>
   <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
   <!-- 头部 -->
@@ -25,127 +26,115 @@
     </div>
   </header>
 
-  <!-- 关于我 -->
-  <section id="about" class="section">
-    <div class="container">
-      <h2>关于我</h2>
-      <p>我是一名资深的固件工程师，擅长嵌入式系统开发、硬件调试和底层固件开发。拥有超过3年的嵌入式开发经验，精通 C、C++、汇编语言以及 RTOS。在多个硬件平台上完成过低层驱动程序的开发与优化，致力于为各类硬件设备提供高效、稳定的固件支持。</p>
-      <!-- 添加视频 -->
-      <div class="video-container">
-        <video width="100%" controls>
-          <source src="normal_video.mp4" type="video/mp4">
-          您的浏览器不支持视频标签。
-        </video>
+  <!-- 主体内容 -->
+  <main>
+    <!-- 关于我 -->
+    <section id="about" class="section fade-target">
+      <div class="container">
+        <h2>关于我</h2>
+        <div class="about-content">
+          <p>我是一名资深的固件工程师，擅长嵌入式系统开发、硬件调试和底层固件开发。拥有超过3年的嵌入式开发经验，精通 C、C++、汇编语言以及 RTOS。在多个硬件平台上完成过低层驱动程序的开发与优化，致力于为各类硬件设备提供高效、稳定的固件支持。</p>
+          <div class="video-container">
+            <video controls>
+              <source src="normal_video.mp4" type="video/mp4">
+              您的浏览器不支持视频标签。
+            </video>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- 工作经历 -->
-  <section id="experience" class="section">
-    <div class="container">
-      <h2>工作经历</h2>
-      <ul>
-        <li>
-          <h3>公司A - 固件工程师</h3>
-          <p>2020年 - 2022年</p>
-          <p>负责嵌入式设备的固件开发与调试，主要使用 C 和 C++ 编写底层驱动程序，参与多款基于 ARM Cortex-M 系列的微控制器产品开发。</p>
-          <ul>
-            <li>优化和调试多个硬件平台，确保固件的稳定性和性能。</li>
-            <li>与硬件团队紧密合作，解决了多个硬件与固件的兼容性问题。</li>
-            <li>参与 RTOS 环境下的任务调度和系统实时性优化。</li>
-          </ul>
-        </li>
-        <li>
-          <h3>公司B - 固件开发实习生</h3>
-          <p>2019年 - 2020年</p>
-          <p>协助完成嵌入式系统固件的开发工作，学习并应用底层开发技能，参与了多个项目的硬件调试与测试。</p>
-          <ul>
-            <li>编写硬件驱动程序并进行单元测试。</li>
-            <li>参与 RTOS 系统的调试，确保任务的顺利执行。</li>
-            <li>帮助团队解决硬件平台的问题并提出优化方案。</li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-  </section>
+    <!-- 工作经历 -->
+    <section id="experience" class="section fade-target">
+      <div class="container">
+        <h2>工作经历</h2>
+        <div class="experience-list">
+          <div class="experience-card">
+            <h3>公司A - 固件工程师</h3>
+            <p class="date">2020年 - 2022年</p>
+            <p>负责嵌入式设备的固件开发与调试，主要使用 C 和 C++ 编写底层驱动程序，参与多款基于 ARM Cortex-M 系列的微控制器产品开发。</p>
+            <ul>
+              <li>优化和调试多个硬件平台，确保固件的稳定性和性能。</li>
+              <li>与硬件团队紧密合作，解决了多个硬件与固件的兼容性问题。</li>
+              <li>参与 RTOS 环境下的任务调度和系统实时性优化。</li>
+            </ul>
+          </div>
+          <div class="experience-card">
+            <h3>公司B - 固件开发实习生</h3>
+            <p class="date">2019年 - 2020年</p>
+            <p>协助完成嵌入式系统固件的开发工作，学习并应用底层开发技能，参与了多个项目的硬件调试与测试。</p>
+            <ul>
+              <li>编写硬件驱动程序并进行单元测试。</li>
+              <li>参与 RTOS 系统的调试，确保任务的顺利执行。</li>
+              <li>帮助团队解决硬件平台的问题并提出优化方案。</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <!-- 技能 -->
-  <section id="skills" class="section">
-    <div class="container">
-      <h2>技能</h2>
-      <div class="skill">
-        <p>C/C++ 编程语言</p>
-        <div class="skill-bar">
-          <div class="skill-level" style="width: 90%;"></div>
+    <!-- 技能 -->
+    <section id="skills" class="section fade-target">
+      <div class="container">
+        <h2>技能</h2>
+        <div class="skills-grid">
+          <div class="skill-card"><i class="fas fa-code"></i><h3>C/C++ 编程</h3><p>精通 C/C++ 编程，具备扎实的底层开发能力。</p></div>
+          <div class="skill-card"><i class="fas fa-microchip"></i><h3>嵌入式系统</h3><p>熟悉嵌入式系统架构和硬件接口协议。</p></div>
+          <div class="skill-card"><i class="fas fa-tools"></i><h3>硬件调试</h3><p>熟练使用 JTAG、逻辑分析仪等硬件调试工具。</p></div>
+          <div class="skill-card"><i class="fas fa-cogs"></i><h3>RTOS</h3><p>熟悉 RTOS 和多任务调度技术。</p></div>
+          <div class="skill-card"><i class="fas fa-project-diagram"></i><h3>项目管理</h3><p>具备良好的项目管理和团队协作能力。</p></div>
+          <div class="skill-card"><i class="fab fa-git"></i><h3>Git 版本控制</h3><p>熟练使用 Git 进行版本控制和团队协作。</p></div>
         </div>
       </div>
-      <div class="skill">
-        <p>RTOS 和多任务调度</p>
-        <div class="skill-bar">
-          <div class="skill-level" style="width: 85%;"></div>
-        </div>
-      </div>
-      <div class="skill">
-        <p>硬件调试工具</p>
-        <div class="skill-bar">
-          <div class="skill-level" style="width: 80%;"></div>
-        </div>
-      </div>
-      <div class="skill">
-        <p>嵌入式系统架构</p>
-        <div class="skill-bar">
-          <div class="skill-level" style="width: 75%;"></div>
-        </div>
-      </div>
-      <div class="skill">
-        <p>Git 版本控制</p>
-        <div class="skill-bar">
-          <div class="skill-level" style="width: 70%;"></div>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- 项目经验 -->
-  <section id="projects" class="section">
-    <div class="container">
-      <h2>项目经验</h2>
-      <div class="project">
-        <h3>智能家居控制系统</h3>
-        <p>为智能家居设备开发了基于 ZigBee 协议的控制系统，支持设备的远程控制和状态监控。</p>
-        <ul>
-          <li>使用 ARM Cortex-M 处理器开发底层控制固件。</li>
-          <li>通过 ZigBee 协议实现了设备之间的无线通信。</li>
-          <li>优化了设备的响应速度和功耗，提升了用户体验。</li>
-        </ul>
+    <!-- 项目经验 -->
+    <section id="projects" class="section fade-target">
+      <div class="container">
+        <h2>项目经验</h2>
+        <div class="project-list">
+          <div class="project-card">
+            <h3>智能家居控制系统</h3>
+            <p>为智能家居设备开发了基于 ZigBee 协议的控制系统，支持设备的远程控制和状态监控。</p>
+            <ul>
+              <li>使用 ARM Cortex-M 处理器开发底层控制固件。</li>
+              <li>通过 ZigBee 协议实现了设备之间的无线通信。</li>
+              <li>优化了设备的响应速度和功耗，提升了用户体验。</li>
+            </ul>
+          </div>
+          <div class="project-card">
+            <h3>车载监控系统</h3>
+            <p>为车载监控系统开发了嵌入式固件，支持视频数据的实时传输和存储。</p>
+            <ul>
+              <li>为系统设计并实现了基于 FPGA 的视频解码模块。</li>
+              <li>编写了多个硬件驱动程序，确保设备与传感器的兼容性。</li>
+              <li>优化了视频数据传输速度，减少了延迟并提升了系统的稳定性。</li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <div class="project">
-        <h3>车载监控系统</h3>
-        <p>为车载监控系统开发了嵌入式固件，支持视频数据的实时传输和存储。</p>
-        <ul>
-          <li>为系统设计并实现了基于 FPGA 的视频解码模块。</li>
-          <li>编写了多个硬件驱动程序，确保设备与传感器的兼容性。</li>
-          <li>优化了视频数据传输速度，减少了延迟并提升了系统的稳定性。</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- 联系我 -->
-  <section id="contact" class="section">
-    <div class="container">
-      <h2>联系我</h2>
-      <p>邮箱：18004083353@163.com</p>
-      <p>GitHub：<a href="https://github.com/Dong7777" target="_blank">https://github.com/Dong7777</a></p>
-      <!-- 添加联系表单 -->
-      <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
-        <input type="text" name="name" placeholder="您的姓名" required>
-        <input type="email" name="email" placeholder="您的邮箱" required>
-        <textarea name="message" placeholder="您的留言" rows="5" required></textarea>
-        <button type="submit">发送</button>
-      </form>
-    </div>
-  </section>
+    <!-- 联系我 -->
+    <section id="contact" class="section fade-target">
+      <div class="container">
+        <h2>联系我</h2>
+        <div class="contact-content">
+          <p>邮箱：18004083353@163.com</p>
+          <p>GitHub：<a href="https://github.com/Dong7777" target="_blank">https://github.com/Dong7777</a></p>
+          <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+            <input type="text" name="name" placeholder="您的姓名" required>
+            <input type="email" name="email" placeholder="您的邮箱" required>
+            <textarea name="message" placeholder="您的留言" rows="5" required></textarea>
+            <button type="submit">发送</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- 粒子背景容器嵌入 main 内部 -->
+    <div id="particles-js"></div>
+  </main>
 
   <!-- 页脚 -->
   <footer>
@@ -154,16 +143,6 @@
     </div>
   </footer>
 
-  <!-- 平滑滚动脚本 -->
-  <script>
-    document.querySelectorAll('nav ul li a').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href').substring(1);
-        const targetSection = document.getElementById(targetId);
-        targetSection.scrollIntoView({ behavior: 'smooth' });
-      });
-    });
-  </script>
+  <script src="scripts.js"></script>
 </body>
 </html>

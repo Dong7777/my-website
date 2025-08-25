@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>金冬 — 固件工程师 · 嵌入式系统</title>
+  <meta name="description" content="金冬 — 资深固件工程师，擅长嵌入式系统、驱动开发、RTOS与硬件调试。阅读详细项目与可下载简历。">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --accent:#2dd4bf; --muted:#94a3b8; --glass: rgba(255,255,255,0.04);
+      --glass-2: rgba(255,255,255,0.02); --radius:14px; --container:1100px;
+      font-family: 'Roboto', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;color:#e6eef6;background:linear-gradient(180deg,#071027 0%, #071a2b 60%);}
+    .wrap{max-width:var(--container);margin:32px auto;padding:28px;border-radius:18px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));backdrop-filter:blur(6px)}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;gap:16px;align-items:center}
+    .logo{width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#06b6d4);display:flex;align-items:center;justify-content:center;color:#021;font-weight:700;font-size:1.2rem}
+    h1{margin:0;color:#fff;font-size:1.6rem}
+    .subtitle{color:var(--muted);margin-top:4px;font-size:0.9rem}
+    nav ul{display:flex;gap:16px;list-style:none;padding:0;margin:0}
+    nav a{color:var(--muted);text-decoration:none;font-weight:500}
+    nav a:hover{color:var(--accent)}
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:24px;margin-top:28px}
+    .card{background:linear-gradient(180deg,var(--card), rgba(10,16,24,0.6));padding:20px;border-radius:var(--radius);box-shadow:0 8px 30px rgba(2,6,23,0.6);}
+    .summary{color:#dbeafe}
+    .meta{display:flex;gap:12px;margin-top:14px}
+    .meta .item{background:var(--glass);padding:10px 12px;border-radius:10px;color:var(--muted);font-weight:600}
+    .skills{display:flex;flex-direction:column;gap:10px;margin-top:14px}
+    .skill{display:flex;align-items:center;gap:12px}
+    .skill .label{width:110px;color:var(--muted);font-size:0.9rem}
+    .bar{flex:1;height:10px;background:var(--glass-2);border-radius:8px;overflow:hidden}
+    .bar > i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),#60a5fa);width:0;border-radius:8px}
+    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-top:18px}
+    .project .meta{color:var(--muted);font-size:0.9rem}
+    .timeline{margin-top:18px}
+    .timeline-item{display:flex;gap:12px;margin-bottom:14px}
+    .timeline-item .dot{width:12px;height:12px;border-radius:50%;background:var(--accent);margin-top:6px}
+    footer{display:flex;justify-content:space-between;align-items:center;margin-top:22px;color:var(--muted);font-size:0.9rem}
+    .controls{display:flex;gap:8px;align-items:center}
+    .btn{padding:8px 12px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--muted);cursor:pointer}
+    .btn.primary{background:linear-gradient(90deg,var(--accent),#3b82f6);color:#022}
+    .case{margin-top:10px;border-left:2px solid rgba(255,255,255,0.03);padding-left:12px;color:var(--muted)}
+    pre{background:#071426;padding:12px;border-radius:8px;color:#cbd5e1;overflow:auto}
+
+    /* responsive */
+    @media(max-width:980px){.hero{grid-template-columns:1fr}.wrap{margin:12px}}
+  </style>
+  <script type="application/ld+json">{
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"金冬",
+    "jobTitle":"固件工程师",
+    "url":"https://your-domain.example/",
+    "sameAs":["https://github.com/Dong7777"]
+  }</script>
+</head>
+<body>
+  <div class="wrap" role="main">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden>J D</div>
+        <div>
+          <h1>金冬</h1>
+          <div class="subtitle">固件工程师 · 嵌入式系统 · 驱动/RTOS/硬件调试</div>
+        </div>
+      </div>
+      <div class="controls">
+        <nav aria-label="主导航">
+          <ul>
+            <li><a href="#about">关于</a></li>
+            <li><a href="#experience">经历</a></li>
+            <li><a href="#projects">项目</a></li>
+            <li><a href="#contact">联系</a></li>
+          </ul>
+        </nav>
+        <button class="btn" id="download">下载简历 <i class="fa-solid fa-download" style="margin-left:6px"></i></button>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="card">
+        <h2 style="color:#fff;margin:0">关于我</h2>
+        <p class="summary">拥有 4+ 年嵌入式与固件研发经验，擅长基于 ARM Cortex-M 系列进行底层驱动、外设适配与系统优化，熟悉 FreeRTOS / RT-Thread / Baremetal 开发流程。注重工程化落地与长期稳定性，并具备跨团队沟通能力。</p>
+
+        <div class="meta">
+          <div class="item">经验：4 年+</div>
+          <div class="item">主语言：C / C++</div>
+          <div class="item">平台：STM32 / Nuvoton / RISC-V</div>
+        </div>
+
+        <div class="skills" aria-label="技能概览">
+          <div class="skill"><div class="label">嵌入式 C</div><div class="bar" data-value="95"><i></i></div></div>
+          <div class="skill"><div class="label">驱动 & HAL</div><div class="bar" data-value="90"><i></i></div></div>
+          <div class="skill"><div class="label">RTOS</div><div class="bar" data-value="85"><i></i></div></div>
+          <div class="skill"><div class="label">硬件调试</div><div class="bar" data-value="82"><i></i></div></div>
+        </div>
+
+        <div style="margin-top:16px;display:flex;gap:12px">
+          <a class="btn primary" href="https://github.com/Dong7777" target="_blank">查看 GitHub</a>
+          <button class="btn" id="contactBtn">发送邮件</button>
+        </div>
+      </div>
+
+      <aside class="card" aria-label="精选项目与亮点">
+        <h3 style="margin-top:0;color:#fff">精选案例</h3>
+        <div class="project">
+          <strong>智能家居控制器 — ZigBee 网关</strong>
+          <div class="meta">角色：主开发 | 贡献：驱动、低功耗策略、OTA</div>
+          <div class="case">通过引入外设睡眠策略与 DMA 优化，将设备平均功耗降低 38%，并完成 100+ 台设备兼容测试。</div>
+        </div>
+
+        <div style="height:12px"></div>
+
+        <div class="project">
+          <strong>车载监控系统 — FPGA + MCU 协同</strong>
+          <div class="meta">角色：固件负责人 | 贡献：视频流稳定性优化、网络堆栈迁移</div>
+          <div class="case">解决了高温下丢帧问题，通过优化缓存与流水线设计，延迟降低 42%。</div>
+        </div>
+
+      </aside>
+    </section>
+
+    <section id="experience" class="card" style="margin-top:20px">
+      <h2 style="margin:0;color:#fff">工作经历</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="dot" aria-hidden></div>
+          <div>
+            <strong>公司A · 固件工程师</strong>
+            <div class="meta">2020 — 2022</div>
+            <div class="case">负责 ARM Cortex-M 平台驱动层和外设交互实现，优化 SPI/DMA 的吞吐与稳定性。主要成就包括实现模块化 HAL、降低整体复位次数。</div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="dot"></div>
+          <div>
+            <strong>公司B · 固件开发实习生</strong>
+            <div class="meta">2019 — 2020</div>
+            <div class="case">参与 PCB 验证与 bootloader 功能实现，完成基础驱动单元测试与问题复现。</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" style="margin-top:18px">
+      <h2 style="color:#fff;margin:0 0 12px">项目经验（详细案例）</h2>
+      <div class="projects">
+        <div class="card project-card">
+          <h4 style="margin:0 0 6px;color:#fff">智能家居控制系统</h4>
+          <div class="meta">技术栈：ARM Cortex-M、ZigBee、FreeRTOS、C</div>
+          <p class="case">实现网关固件、设备发现逻辑与 OTA 机制；负载压力下稳定运营 > 72 小时无重启。</p>
+          <details>
+            <summary style="color:var(--accent);cursor:pointer">关键实现与数据</summary>
+            <ul>
+              <li>设计模块化 OTA，支持差分更新与回滚。</li>
+              <li>使用 DMA + 双缓冲提升无线吞吐，降低中断处理延迟。</li>
+              <li>功耗相关：睡眠模式唤醒计时器精度误差 < 5ms。</li>
+            </ul>
+          </details>
+        </div>
+
+        <div class="card project-card">
+          <h4 style="margin:0 0 6px;color:#fff">车载监控系统</h4>
+          <div class="meta">技术栈：FPGA、嵌入式 Linux / MCU 协同、视频流处理</div>
+          <p class="case">负责 MCU 与 FPGA 的接口协议、重连策略以及实时缓存机制。</p>
+          <details>
+            <summary style="color:var(--accent);cursor:pointer">关键实现与数据</summary>
+            <ul>
+              <li>实现自适应帧率缓冲策略，丢帧率从 3.1% 降至 0.9%。</li>
+              <li>与团队共同完成 ISO 16750-3 热循环测试。</li>
+            </ul>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="card" style="margin-top:18px">
+      <h2 style="margin:0 0 8px;color:#fff">联系我</h2>
+      <p class="meta">邮箱：<a href="mailto:18004083353@163.com">18004083353@163.com</a> · GitHub：<a href="https://github.com/Dong7777" target="_blank">Dong7777</a></p>
+      <form id="contactForm" style="margin-top:12px;display:grid;grid-template-columns:1fr 1fr;gap:8px" action="https://formspree.io/f/your-form-id" method="POST">
+        <input name="name" placeholder="姓名" required style="padding:10px;border-radius:8px;border:none;background:#061726;color:#e6eef6">
+        <input name="email" type="email" placeholder="邮箱" required style="padding:10px;border-radius:8px;border:none;background:#061726;color:#e6eef6">
+        <textarea name="message" placeholder="写点你的需求或职位意向..." required style="grid-column:1/3;padding:10px;border-radius:8px;border:none;background:#061726;color:#e6eef6;min-height:110px"></textarea>
+        <button class="btn primary" type="submit" style="grid-column:1/3">发送</button>
+      </form>
+    </section>
+
+    <footer>
+      <div>© 2025 金冬</div>
+      <div class="meta">建议部署：Netlify / Vercel | 文件体积尽量 ≤ 200KB</div>
+    </footer>
+  </div>
+
+  <script>
+    // 动画技能条
+    document.querySelectorAll('.bar').forEach(bar=>{
+      const value = Number(bar.dataset.value)||80;
+      const inner = bar.querySelector('i');
+      requestAnimationFrame(()=>{ inner.style.width = value + '%'; });
+    });
+
+    // smooth scroll
+    document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();document.querySelector(a.getAttribute('href')).scrollIntoView({behavior:'smooth',block:'start'});}));
+
+    // download resume (示例：替换为你实际的 PDF 路径)
+    document.getElementById('download').addEventListener('click', ()=>{
+      window.open('resume.pdf','_blank');
+    });
+
+    // contact quick open
+    document.getElementById('contactBtn').addEventListener('click', ()=>{
+      document.getElementById('contactForm').scrollIntoView({behavior:'smooth'});
+    });
+
+    // small form UX: show a toast on submit
+    document.getElementById('contactForm').addEventListener('submit', (e)=>{
+      // allow default submission to Formspree; show lightweight confirmation
+      setTimeout(()=>{ alert('感谢联系，我会尽快回复。'); }, 400);
+    });
+  </script>
+</body>
+</html>

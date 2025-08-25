@@ -1,11 +1,13 @@
-/* 基础样式 */
+/* 全局基础样式 */
 body {
   font-family: 'Roboto', sans-serif;
-  line-height: 1.6;
   margin: 0;
   padding: 0;
-  color: #333;
-  background-color: #f4f4f4;
+  color: #e0e0e0;
+  background: radial-gradient(circle at top left, #0f2027, #203a43, #2c5364);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .container {
@@ -14,156 +16,189 @@ body {
   margin: 0 auto;
 }
 
-/* 头部 */
+/* 头部导航 */
 header {
-  background: #333;
-  color: #fff;
-  padding: 20px 0;
+  background: rgba(15, 32, 39, 0.7);
+  backdrop-filter: blur(10px);
+  color: #00eaff;
+  padding: 30px 0;
   text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 0 20px rgba(0, 234, 255, 0.3);
 }
 
 header h1 {
   margin: 0;
-  font-size: 2.5rem;
+  font-size: 2.8rem;
+  font-family: 'Orbitron', sans-serif;
+  text-shadow: 0 0 10px #00eaff, 0 0 20px #00eaff;
+  animation: neonPulse 2s infinite;
+}
+
+@keyframes neonPulse {
+  0%, 100% { text-shadow: 0 0 10px #00eaff, 0 0 20px #00eaff; }
+  50% { text-shadow: 0 0 20px #00c6ff, 0 0 40px #0072ff; }
 }
 
 header p {
-  margin: 5px 0;
+  margin: 10px 0;
   font-size: 1.2rem;
+  color: #b0f3ff;
 }
 
 header nav ul {
   list-style: none;
   padding: 0;
+  margin: 15px 0 0;
 }
 
 header nav ul li {
   display: inline;
-  margin: 0 10px;
+  margin: 0 15px;
 }
 
 header nav ul li a {
-  color: #fff;
+  color: #e0e0e0;
   text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
 }
 
-/* 内容区域 */
+header nav ul li a:hover {
+  color: #00eaff;
+}
+
+/* 主体内容 */
+main {
+  flex: 1;
+  position: relative;
+}
+
 .section {
-  padding: 40px 0;
+  scroll-margin-top: 100px; /* 避免导航遮挡 */
 }
 
 .section h2 {
+  text-align: center;
   font-size: 2rem;
+  color: #00eaff;
   margin-bottom: 20px;
+  text-shadow: 0 0 10px #00eaff;
 }
 
-.section ul {
-  list-style: none;
-  padding: 0;
+/* 卡片通用样式 */
+.about-content, .experience-card, .skill-card, .project-card, .contact-content {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(0, 234, 255, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  opacity: 0;
+  transform: translateY(30px);
 }
 
-.section ul li {
-  margin-bottom: 10px;
+.about-content.fade-in, .experience-card.fade-in, .skill-card.fade-in, .project-card.fade-in, .contact-content.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.8s ease-out;
 }
 
-/* 项目 */
-.project {
-  margin-bottom: 20px;
-}
-
-.project a {
-  color: #007BFF;
-  text-decoration: none;
-}
-
-.project a:hover {
-  text-decoration: underline;
-}
-
-/* 技能图表 */
-.skill {
-  margin-bottom: 15px;
-}
-
-.skill-bar {
-  width: 100%;
-  height: 10px;
-  background-color: #e0e0e0;
-  border-radius: 5px;
-  overflow: hidden;
-}
-
-.skill-level {
-  height: 100%;
-  background-color: #007BFF;
-  border-radius: 5px;
+.about-content:hover, .experience-card:hover, .skill-card:hover, .project-card:hover, .contact-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(0, 234, 255, 0.3);
 }
 
 /* 视频容器 */
 .video-container {
   margin-top: 20px;
-  border-radius: 8px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid rgba(0, 234, 255, 0.3);
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 video {
   width: 100%;
   height: auto;
+  border-radius: 12px;
+}
+
+/* 技能网格 */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.skill-card i {
+  font-size: 2.5rem;
+  color: #00eaff;
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px #00eaff;
 }
 
 /* 联系表单 */
-.contact-form {
-  max-width: 600px;
-  margin: 20px auto;
-}
-
 .contact-form input,
 .contact-form textarea {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #e0e0e0;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #aaa;
 }
 
 .contact-form button {
-  padding: 10px 20px;
-  background-color: #007BFF;
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
   color: #fff;
+  font-weight: bold;
   border: none;
-  border-radius: 5px;
+  border-radius: 50px;
   cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 0 10px rgba(0,198,255,0.6);
 }
 
 .contact-form button:hover {
-  background-color: #0056b3;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0,198,255,0.9);
+}
+
+/* 粒子背景容器嵌入 main 内部 */
+#particles-js {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* 在内容后面 */
 }
 
 /* 页脚 */
 footer {
-  background: #333;
-  color: #fff;
+  background: rgba(15, 32, 39, 0.9);
+  color: #aaa;
   text-align: center;
-  padding: 10px 0;
+  padding: 20px 0;
   margin-top: 40px;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(0,234,255,0.2);
 }
 
-/* 响应式设计 */
+/* 响应式优化 */
 @media (max-width: 768px) {
-  header h1 {
-    font-size: 2rem;
-  }
-
-  header p {
-    font-size: 1rem;
-  }
-
-  .section h2 {
-    font-size: 1.5rem;
-  }
-
-  .contact-form {
-    padding: 0 10px;
-  }
+  header h1 { font-size: 2rem; }
+  .section h2 { font-size: 1.5rem; }
 }
